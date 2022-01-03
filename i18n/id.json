@@ -5,7 +5,8 @@
 			"Irwangatot",
 			"IvanLanin",
 			"Rex",
-			"පසිඳු කාවින්ද"
+			"පසිඳු කාවින්ද",
+			"Daud I.F. Argana"
 		]
 	},
 	"semanticdrilldown-desc": "Suatu antarmuka penelusuran untuk menyelami data semantik",
@@ -32,5 +33,6 @@
 	"sd_createfilter_usepropertyvalues": "Gunakan semua nilai dari properti ini untuk filter",
 	"sd_createfilter_usecategoryvalues": "Dapatkan nilai untuk filter dari kategori ini:",
 	"sd_createfilter_requirefilter": "Perlu memilih filter lain sebelum yang satu ini ditampilkan:",
-	"sd-pageschemas-filter": "Penyaring"
+	"sd-pageschemas-filter": "Penyaring",
+	"sd-pageschemas-values": "Nilai"
 }
