@@ -194,9 +194,10 @@ class SDAppliedFilter {
 	 */
 	function getAllOrValues( $category ) {
 		$possible_values = [];
-		$property_value = $this->filter->escaped_property;
+		$property_value = $dbr->addQuotes( $this->filter->escaped_property );
 		$dbr = wfGetDB( DB_REPLICA );
 		$property_table_name = $dbr->tableName( $this->filter->getTableName() );
+		$category = $dbr->addQuotes( $category );
 		if ( $this->filter->property_type != 'date' ) {
 			$value_field = $this->filter->getValueField();
 		} else {
