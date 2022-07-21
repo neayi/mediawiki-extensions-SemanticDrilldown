@@ -480,7 +480,10 @@ class SDUtils {
 	public static function getIDsTableName() {
 		global $smwgDefaultStore;
 
-		if ( $smwgDefaultStore === 'SMWSQLStore3' || $smwgDefaultStore === 'SMWSparqlStore' ) {
+		if ( $smwgDefaultStore === 'SMWSQLStore3' ||
+			 $smwgDefaultStore === 'SMWSparqlStore' ||
+			 $smwgDefaultStore === 'SMW\SQLStore\SQLStore' ||
+			 $smwgDefaultStore === 'SMW\SPARQLStore\SPARQLStore' ) {
 			return 'smw_object_ids';
 		} else {
 			return 'smw_ids';
@@ -490,7 +493,10 @@ class SDUtils {
 	public static function getCategoryInstancesTableName() {
 		global $smwgDefaultStore;
 
-		if ( $smwgDefaultStore === 'SMWSQLStore3' || $smwgDefaultStore === 'SMWSparqlStore' ) {
+		if ( $smwgDefaultStore === 'SMWSQLStore3' ||
+			 $smwgDefaultStore === 'SMWSparqlStore' ||
+			 $smwgDefaultStore === 'SMW\SQLStore\SQLStore' ||
+			 $smwgDefaultStore === 'SMW\SPARQLStore\SPARQLStore' ) {
 			return 'smw_fpt_inst';
 		} else {
 			return 'smw_inst2';
