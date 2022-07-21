@@ -59,14 +59,6 @@ $wgHooks['ParserFirstCallInit'][] = 'SDParserFunctions::registerFunctions';
 $wgHooks['UnitTestsList'][] = 'SDUtils::onUnitTestsList';
 
 # ##
-# This is the path to your installation of Semantic Drilldown as
-# seen from the web. Change it if required ($wgScriptPath is the
-# path to the base directory of your wiki). No final slash.
-# # TODO: fix hardcoded path
-$sdgScriptPath = $wgScriptPath . '/extensions/SemanticDrilldown';
-# #
-
-# ##
 # # Variables for display
 # ##
 // Set to true to have Special:BrowseData show only categories that have
