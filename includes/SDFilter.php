@@ -151,7 +151,10 @@ class SDFilter {
 	public function loadDBStructureInformation() {
 		global $smwgDefaultStore, $wgDBtype;
 
-		if ( $smwgDefaultStore === 'SMWSQLStore3' || $smwgDefaultStore === 'SMWSparqlStore' ) {
+		if ( $smwgDefaultStore === 'SMWSQLStore3' ||
+			 $smwgDefaultStore === 'SMWSparqlStore' ||
+			 $smwgDefaultStore === 'SMW\SQLStore\SQLStore'  ||
+			 $smwgDefaultStore === 'SMW\SPARQLStore\SPARQLStore' ) {
 			if ( $this->property_type === 'page' ) {
 				$this->db_table_name = 'smw_di_wikipage';
 				$this->db_value_field = 'o_ids.smw_title';

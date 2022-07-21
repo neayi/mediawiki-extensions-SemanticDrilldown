@@ -32,7 +32,7 @@ class SDBrowseData extends IncludableSpecialPage {
 		}
 		$this->setHeaders();
 		$out->addModules( 'ext.semanticdrilldown.main' );
-		$out->addScript( '<!--[if IE]><link rel="stylesheet" href="' . $sdgScriptPath . '/skins/SD_IEfixes.css" media="screen" /><![endif]-->' );
+		$out->addScript( '<!--[if IE]><link rel="stylesheet" href="' . $wgScriptPath . '/extensions/SemanticDrilldown/skins/SD_IEfixes.css" media="screen" /><![endif]-->' );
 
 		// set default
 		if ( $sdgNumResultsPerPage == null ) {

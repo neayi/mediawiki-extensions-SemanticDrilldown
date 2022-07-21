@@ -11,10 +11,10 @@ use MediaWiki\MediaWikiServices;
 class SDUtils {
 
 	public static function setGlobalJSVariables( &$vars ) {
-		global $sdgScriptPath;
+		global $wgScriptPath;
 
-		$vars['sdgDownArrowImage'] = "$sdgScriptPath/skins/down-arrow.png";
-		$vars['sdgRightArrowImage'] = "$sdgScriptPath/skins/right-arrow.png";
+		$vars['sdgDownArrowImage'] = "$wgScriptPath/extensions/SemanticDrilldown/skins/down-arrow.png";
+		$vars['sdgRightArrowImage'] = "$wgScriptPath/extensions/SemanticDrilldown/skins/right-arrow.png";
 		return true;
 	}
 
@@ -491,7 +491,10 @@ class SDUtils {
 	public static function getIDsTableName() {
 		global $smwgDefaultStore;
 
-		if ( $smwgDefaultStore === 'SMWSQLStore3' || $smwgDefaultStore === 'SMWSparqlStore' ) {
+		if ( $smwgDefaultStore === 'SMWSQLStore3' ||
+			 $smwgDefaultStore === 'SMWSparqlStore' ||
+			 $smwgDefaultStore === 'SMW\SQLStore\SQLStore'  ||
+			 $smwgDefaultStore === 'SMW\SPARQLStore\SPARQLStore' ){
 			return 'smw_object_ids';
 		} else {
 			return 'smw_ids';
@@ -501,7 +504,10 @@ class SDUtils {
 	public static function getCategoryInstancesTableName() {
 		global $smwgDefaultStore;
 
-		if ( $smwgDefaultStore === 'SMWSQLStore3' || $smwgDefaultStore === 'SMWSparqlStore' ) {
+		if ( $smwgDefaultStore === 'SMWSQLStore3' ||
+			 $smwgDefaultStore === 'SMWSparqlStore' ||
+			 $smwgDefaultStore === 'SMW\SQLStore\SQLStore'  ||
+			 $smwgDefaultStore === 'SMW\SPARQLStore\SPARQLStore' ) {
 			return 'smw_fpt_inst';
 		} else {
 			return 'smw_inst2';
